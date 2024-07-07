@@ -1,4 +1,5 @@
-import HomePage from '@pages/HomePage/HomePage'
+import HomePage from '@pages/HomePage'
+import NotFound from '@pages/NotFound'
 
 export interface Route {
 	path: string
@@ -11,5 +12,9 @@ export const AppRouter: AppRouter = [
 	{
 		path: '/',
 		element: <HomePage />,
+	},
+	{
+		path: '*',
+		element: <NotFound />,
 	},
 ]
