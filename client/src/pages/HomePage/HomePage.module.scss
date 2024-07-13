@@ -1,0 +1,218 @@
+.container {
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../../assets/Images/Bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+	margin-top: -20px;
+}
+
+.logo {
+	width: 100px;
+	height: auto;
+}
+
+.nav {
+	margin-left: auto;
+}
+
+.navList {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+}
+
+.navItem {
+	margin-right: 30px;
+	font-size: 18px;
+	cursor: pointer;
+	color: #fff;
+	transition: color 0.3s ease;
+}
+
+.navItem:hover {
+	color: #ff0000;
+}
+
+.background {
+	display: flex;
+	justify-content: center;
+	padding-right: 500px;
+	margin-top: -30px;
+}
+
+.backgroundImage {
+	width: 100%;
+	height: auto;
+}
+
+.buttons {
+	position: relative;
+	left: 400px;
+	top: -250px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.playButton {
+	display: flex;
+	font-weight: lighter;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	color: black;
+	border-radius: 5px;
+	font-size: 20px;
+	transition: background-color 0.3s ease;
+}
+
+.registerButton {
+	display: flex;
+	font-weight: lighter;
+	justify-content: center;
+	align-items: center;
+	height: 58px;
+	background-color: gray;
+	color: black;
+	border-radius: 5px;
+	font-size: 20px;
+	transition: background-color 0.3s ease;
+}
+
+.contact {
+	transform: translate(33rem, -155px);
+	display: flex;
+	align-items: center;
+	color: white;
+	gap: 15px;
+	font-weight: lighter;
+}
+
+.mailIcon {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.email {
+	margin-left: auto;
+}
+
+.socialIcons {
+	margin-top: -180px;
+	margin-right: 65rem;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	display: flex;
+	gap: 20px;
+}
+
+.icon,
+.instagramIcon {
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.icon:hover,
+.instagramIcon:hover {
+	color: #ff0000;
+}
+
+.mailIcon:hover {
+	color: #cc0000;
+}
+
+.Rigth {
+	width: 150px;
+	height: 30px;
+	display: none;
+	color: white;
+}
+
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-right: 270px;
+		padding-top: 30px;
+	}
+
+	.Rigth {
+		width: 140px;
+		height: 55px;
+		display: block;
+		color: white;
+		position: relative;
+		left: 290px;
+		top: -70px;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: auto;
+	}
+
+	.nav {
+		margin-left: 0;
+		display: none;
+	}
+
+	.navList {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.background {
+		padding-right: 0;
+		margin-top: 20px;
+	}
+
+	.buttons {
+		left: 0;
+		top: -10px;
+	}
+
+	.contact {
+		transform: translate(0, 0);
+		margin-top: 20px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.socialIcons {
+		margin-top: 20px;
+		transform: translate(0, 0);
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.email {
+		padding-left: 0;
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+}
