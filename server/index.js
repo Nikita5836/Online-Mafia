@@ -1,3 +1,4 @@
+import path from 'path'
 import express from 'express'
 import cors from 'cors'
 import http from 'http'
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 	res.send('Hello world')
 })
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
 	console.log('server start')
 })
