@@ -1,13 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { AiFillMail } from 'react-icons/ai';
-import { FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa';
-import styles from './HomePage.module.scss';
-import Logo from '../../assets/Images/Логотип.svg';
-import icons from '../../assets/Icons/Bg_icons.svg';
-import { FiAlignRight } from 'react-icons/fi';
-import Red from '@assets/Images/Game_btn.svg';
-import Blue from '@assets/Images/Reg btn.svg';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './HomePage.module.scss'
+import Logo from '../../assets/Images/Logo.svg'
+import icons from '../../assets/Icons/Bg_icons.svg'
+import Game_btn from '@assets/Images/Game_btn.svg'
+import Reg_btn from '@assets/Images/Reg btn.svg'
+
+import { SlSocialFacebook } from 'react-icons/sl'
+import { SlSocialYoutube } from 'react-icons/sl'
+import { IoLogoInstagram } from 'react-icons/io5'
+import { TfiEmail } from 'react-icons/tfi'
 
 const HomePage: React.FC = () => {
 	return (
@@ -16,7 +18,6 @@ const HomePage: React.FC = () => {
 				<div className={styles.logo}>
 					<img src={Logo} alt='logo' />
 				</div>
-				<FiAlignRight className={styles.Rigth} />
 				<nav className={styles.nav}>
 					<ul className={styles.navList}>
 						<li className={styles.navItem}>
@@ -38,37 +39,40 @@ const HomePage: React.FC = () => {
 							<Link to='/profile'>Профиль</Link>
 						</li>
 						<li className={styles.navItem}>
-							<Link to='/registration'>Регистрация</Link>
+							<Link to='/register'>Регистрация</Link>
 						</li>
 					</ul>
 				</nav>
 			</header>
 
-			<div className={styles.background}>
+			<main className={styles.background}>
 				<img src={icons} alt='background' className={styles.backgroundImage} />
-			</div>
+				<div className={styles.buttons}>
+					<Link to='/game' className={styles.playButton}>
+						<img src={Game_btn} alt='#' />
+					</Link>
+					<Link to='/register' className={styles.registerButton}>
+						<img src={Reg_btn} alt='#' />
+					</Link>
+				</div>
+			</main>
 
-			<div className={styles.buttons}>
-				<Link to='/game' className={styles.playButton}>
-					<img src={Red} alt='#' />
-				</Link>
-				<Link to='/registration' className={styles.registerButton}>
-					<img src={Blue} alt='#' />
-				</Link>
-			</div>
-
-			<div className={styles.contact}>
-				<AiFillMail className={styles.mailIcon} />
-				<p className={styles.email}>OnlineMafia@gmail.com</p>
-			</div>
-
-			<div className={styles.socialIcons}>
-				<FaFacebookF className={styles.icon} />
-				<FaYoutube className={styles.icon} />
-				<FaInstagram className={styles.instagramIcon} />
-			</div>
+			<footer className={styles.footer}>
+				<div className={styles.SocialIcons}>
+					<SlSocialFacebook className={styles.icons} />
+					<SlSocialYoutube className={styles.icons} />
+					<IoLogoInstagram className={styles.icons} />
+				</div>
+				<div className={styles.email}>
+					<TfiEmail
+						href='mailto:MafiaOnline12@gmail.com'
+						className={styles.icons}
+					/>
+					<a href='mailto:MafiaOnline12@gmail.com'>MafiaOnline12@gmail.com</a>
+				</div>
+			</footer>
 		</div>
-	);
-};
+	)
+}
 
-export default HomePage;
+export default HomePage
